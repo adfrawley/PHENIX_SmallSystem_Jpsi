@@ -41,14 +41,23 @@ void Draw_RAB_rT(){
 	TGraphErrors *hRAB_thick_pAl_sys[narm];
 	TGraphErrors *hRAB_thick_HeAu_sys[narm];
 
+	/*
 	double rt_pal[3] = {2.37, 2.89, 3.32};
 	double rt_pau[6] = {3.21, 3.52, 3.88, 4.39, 5.02, 6.56};
 	double rt_heau[3] = {};
-
+	*/
+	/*
+        // These are average T_A weighted by rT distribution (N-N collisions) only 
 	double thick_pal[3] = {0.568, 0.448, 0.353};
 	double thick_pau[6] = {1.750, 1.661, 1.538, 1.361, 1.123, 0.617};
 	double thick_heau[3] = {1.657, 1.307, 0.800};
+	*/
 
+        // These are average T_A weighted by rT distribution (N-N collisions) and Ncoll (hard process scaling) 
+	// They are the values applicable to J/psi production
+	double thick_pal[3] = {0.681, 0.619, 0.548};
+	double thick_pau[6] = {1.830, 1.778, 1.704, 1.608, 1.473, 1.158};
+	double thick_heau[3] = {1.778, 1.568, 1.207};
 
 	for (int iarm=0; iarm<narm; iarm++){
 
